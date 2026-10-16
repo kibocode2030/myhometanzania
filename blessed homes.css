@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #ffffff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #ecebef;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --card-padding: 1.8rem;
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: var(--color-background);
+    color: var(--color-dark);
+    user-select: none;
+    overflow-x: hidden;
+}
+
+.container {
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 16rem auto 24rem;
+    padding-top: 1.5rem;
+}
+
+/* Sidebar */
+aside {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+aside .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+
+aside .logo h2 {
+    font-size: 1.4rem;
+}
+
+aside .logo .primary {
+    color: var(--color-primary);
+}
+
+aside .sidebar {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    height: 85vh;
+    position: relative;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    padding: 1rem 0;
+}
+
+aside .sidebar a {
+    display: flex;
+    color: var(--color-info-dark);
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+    padding-left: 2rem;
+}
+
+aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a h3 {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+aside .sidebar a:hover {
+    color: var(--color-primary);
+    padding-left: 2.3rem;
+}
+
+aside .sidebar a.active {
+    background: var(--color-light);
+    color: var(--color-primary);
+    margin-left: 0;
+}
+
+aside .sidebar a.active::before {
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: var(--color-primary);
+    position: absolute;
+    left: 0;
+}
+
+aside .sidebar .message-count {
+    background: var(--color-danger);
+    color: var(--color-white);
+    padding: 2px 10px;
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
+
+aside .sidebar .logout {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+/* Main Content */
+main {
+    margin-top: 1.4rem;
+}
+
+main h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+main .analyser {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+
+main .analyser > div {
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+main .analyser > div:hover {
+    box-shadow: none;
+}
+
+main .analyser .status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .analyser h3 {
+    margin-left: 0.6rem;
+    font-size: 1rem;
+    color: var(--color-dark-variant);
+}
+
+main .analyser h1 {
+    font-size: 1.4rem;
+    margin-top: 0.4rem;
+    margin-left: 0.6rem;
+}
+
+/* Transactions Table */
+main .recent-transactions {
+    margin-top: 2rem;
+    background: var(--color-white);
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--box-shadow);
+}
+
+main .recent-transactions h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+main table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+main table tbody tr {
+    height: 3.2rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+}
+
+main table tbody td {
+    font-size: 0.9rem;
+}
+
+main table tbody tr:last-child td {
+    border: none;
+}
+
+/* Right Section & Form */
+.right {
+    margin-top: 1.4rem;
+}
+
+.right .top {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.right .top .theme-toggler {
+    background: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+}
+
+.right .top .theme-toggler span {
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right .top .theme-toggler span.active {
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius-1);
+}
+
+.right .profile {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.listing-form-container {
+    margin-top: 2rem;
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.listing-form-container h3 {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+.listing-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.listing-form-container form div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.listing-form-container label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-dark-variant);
+}
+
+.listing-form-container input[type="text"],
+.listing-form-container input[type="email"] {
+    padding: 0.7rem 1rem;
+    border-radius: var(--border-radius-1);
+    border: 1px solid var(--color-info-dark);
+    outline: none;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.listing-form-container input[type="submit"] {
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 600;
+    padding: 0.8rem;
+    border-radius: var(--border-radius-1);
+    cursor: pointer;
+    transition: all 300ms ease;
+    margin-top: 0.5rem;
+}
+
+.listing-form-container input[type="submit"]:hover {
+    background: var(--color-primary-variant);
+}
+
+/* Status Colors */
+.success { color: var(--color-success); font-weight: 600; }
+.warning { color: var(--color-warning); font-weight: 600; }
+.danger { color: var(--color-danger); font-weight: 600; }

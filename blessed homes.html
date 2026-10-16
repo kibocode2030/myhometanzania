@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blessed Homes - Admin Dashboard</title>
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="blessed homes.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <h2>My Blessed <span class="primary">Homes</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">person_outline</span>
+                    <h3>Clients</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">insights</span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">mail_outline</span>
+                    <h3>Messages</h3>
+                    <span class="message-count">14</span>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">apartment</span>
+                    <h3>Listings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">receipt_long</span>
+                    <h3>Transactions</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">add</span>
+                    <h3>Add Property</h3>
+                </a>
+                <a href="#" class="logout">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content Section -->
+        <main>
+            <h1>Real Estate Dashboard</h1>
+
+            <!-- Transaction Analytics Cards -->
+            <div class="analyser">
+                <div class="sales">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Total Sales Revenue</h3>
+                            <h1>$4,250,000</h1>
+                        </div>
+                        <div class="progress">
+                            <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                            <div class="percentage"><p>+81%</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="expenses">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Active Listings</h3>
+                            <h1>38 Properties</h1>
+                        </div>
+                        <div class="progress">
+                            <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                            <div class="percentage"><p>+62%</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="income">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Closed Deals</h3>
+                            <h1>124 Deals</h1>
+                        </div>
+                        <div class="progress">
+                            <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                            <div class="percentage"><p>+44%</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Transactions Table -->
+            <div class="recent-transactions">
+                <h2>Recent Property Transactions</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Property Name</th>
+                            <th>Property Type</th>
+                            <th>Transaction ID</th>
+                            <th>Status</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sunset Luxury Villa</td>
+                            <td>Residential</td>
+                            <td>#TXN-98214</td>
+                            <td class="success">Completed</td>
+                            <td>$850,000</td>
+                        </tr>
+                        <tr>
+                            <td>Green Valley Heights</td>
+                            <td>Apartment</td>
+                            <td>#TXN-98213</td>
+                            <td class="warning">Pending</td>
+                            <td>$320,000</td>
+                        </tr>
+                        <tr>
+                            <td>Ocean Breeze Condo</td>
+                            <td>Condominium</td>
+                            <td>#TXN-98212</td>
+                            <td class="success">Completed</td>
+                            <td>$540,000</td>
+                        </tr>
+                        <tr>
+                            <td>Pinecrest Commercial Plaza</td>
+                            <td>Commercial</td>
+                            <td>#TXN-98211</td>
+                            <td class="danger">Cancelled</td>
+                            <td>$1,200,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- Right Sidebar / Property Listing Form Section -->
+        <div class="right">
+            <div class="top">
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Admin</b></p>
+                        <small class="text-muted">Manager</small>
+                    </div>
+                    <div class="profile-photo">
+                        <span class="material-icons-sharp">account_circle</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add New Listing Form -->
+            <div class="listing-form-container">
+                <h3>Quick Listing Entry</h3>
+                <form>
+                    <div>
+                        <label>Property Title:</label>
+                        <input type="text" placeholder="e.g. Modern Suburban Villa">
+                    </div>
+                    <div>
+                        <label>Location:</label>
+                        <input type="text" placeholder="e.g. Beverly Hills, CA">
+                    </div>
+                    <div>
+                        <label>Listing Price ($):</label>
+                        <input type="text" placeholder="e.g. 450000">
+                    </div>
+                    <div>
+                        <label>Client Email:</label>
+                        <input type="email" placeholder="client@example.com">
+                    </div>
+                    <div>
+                        <input type="submit" value="Publish Property">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
